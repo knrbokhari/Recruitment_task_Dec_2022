@@ -5,6 +5,7 @@ import cors from 'cors';
 
 import * as middlewares from './middlewares';
 import MessageResponse from './interfaces/MessageResponse';
+import configure from './routes';
 
 require('dotenv').config();
 
@@ -20,6 +21,8 @@ app.get<{}, MessageResponse>('/', (req, res) => {
     message: 'server working!',
   });
 });
+
+configure(app)
 
 app.use(middlewares.notFound);
 app.use(middlewares.errorHandler);
