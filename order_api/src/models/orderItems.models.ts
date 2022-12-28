@@ -2,17 +2,17 @@ import mongoose from 'mongoose';
 
 const OrderItemsSchema = new mongoose.Schema(
   {
-    product: [{
+    product: {
       type: String,
       required: true,
-    }],
+    },
   
     quantity: {
       type: Number,
       required: true,
     },
   },
-  { timestamps: true },
+  { timestamps: false, versionKey: false },
 );
 
 const OrderItemsModel = mongoose.model('OrderItems', OrderItemsSchema);

@@ -1,11 +1,12 @@
 import express from 'express';
+import { addNewOrder, getOrder } from '../controllers/order.controllers';
 const router = express.Router();
 
 // get order
-router.get('/');
+router.get('/', getOrder);
 
 // post order
-router.post('/');
+router.post('/', addNewOrder);
 
 
 const orderRoutesConfigure = ( app : any) => {

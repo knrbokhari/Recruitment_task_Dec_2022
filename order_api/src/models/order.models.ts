@@ -13,7 +13,7 @@ const OrderSchema = new mongoose.Schema(
       required: true,
     },
   },
-  { timestamps: true },
+  { timestamps: true,  versionKey: false },
 );
 
 const OrderModel = mongoose.model('Order', OrderSchema);
