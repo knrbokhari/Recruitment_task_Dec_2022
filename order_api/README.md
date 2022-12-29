@@ -39,8 +39,13 @@ Check out the API documentation by visiting this [Link](https://documenter.getpo
 ### Live server link
 Check out the API by visiting this [Link](https://order-api-rxy0.onrender.com/).
 
+```
+https://order-api-rxy0.onrender.com/
+```
+
 ### API Documentation
 
+#### GET API
     $ GET /api/v1/order
 
 API endpoints return an array of Orders.
@@ -69,6 +74,8 @@ API endpoints return an array of Orders.
   ]
 }
 ```
+#### POST API
+
     $ POST /api/v1/order
 
 This API take JSON as a body.
