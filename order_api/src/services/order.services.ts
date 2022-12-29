@@ -24,6 +24,6 @@ export const addNewOrderService = async (
 
 // get order
 export const  getOrderService = async () => {
-    const result = OrderModel.find().populate('orderItems');
+    const result = OrderModel.find().populate('orderItems').select('orderItems phone');
     return result;
 };
