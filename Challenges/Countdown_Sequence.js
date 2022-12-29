@@ -18,30 +18,18 @@
 // finalCountdown([]) ➞ [0, []]
 
 const finalCountdown = (array) => {
-    const reverseArr = array.reverse()
+    const reverseArr = array
     let sequence = 0;
     let newArr = []
     let arr = []
 
     for (let i = 0; i < reverseArr.length; i++) {        
-        if(reverseArr[i] === 1 && reverseArr[i] === reverseArr[i+1]){
+        if(reverseArr[i]-1 === reverseArr[i+1]){
+            arr.push(reverseArr[i])
+        } else if(reverseArr[i] === 1) {
             sequence++
-            arr.unshift(reverseArr[i])
-            newArr.unshift(arr);
-            arr = []
-        } else if( reverseArr[i] === 1 ) {
-            if (!!arr.length){
-                newArr.unshift(arr);
-                arr = []
-            }
-            sequence++
-            arr.unshift(reverseArr[i])
-        } else if (reverseArr[i]-1 === reverseArr[i-1]){
-            arr.unshift(reverseArr[i])
-        }
-        
-        if (reverseArr[i] === reverseArr[reverseArr.length-1] &&!!arr.length){
-            newArr.unshift(arr);
+            arr.push(reverseArr[i]);
+            newArr.push(arr);
             arr = []
         }
     }

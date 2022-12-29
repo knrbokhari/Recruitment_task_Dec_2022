@@ -50,9 +50,10 @@ const timeToEat = (str) => {
 const countTime = (min, hour) =>{
     let restHours = parseInt((hour - min) /60);
     let restMin = 60 - (min % 60);
+    if(min % 60 === 0) restMin = 0
     return [restHours,restMin]
 }
 
-console.log(timeToEat("12:70 a.m."))
-console.log(timeToEat("7:10 a.m."))
-console.log(timeToEat("6:30 p.m."))
+console.log(timeToEat("2:00 p.m."))
+console.log(timeToEat("5:50 a.m."))
+console.log(timeToEat("6:30 a.m."))
