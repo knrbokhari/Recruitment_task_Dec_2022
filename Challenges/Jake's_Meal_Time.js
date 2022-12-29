@@ -54,6 +54,6 @@ const countTime = (min, hour) =>{
     return [restHours,restMin]
 }
 
-console.log(timeToEat("2:00 p.m."))
 console.log(timeToEat("5:50 a.m."))
-console.log(timeToEat("6:30 a.m."))
+console.log(timeToEat("9:30 a.m."))
+console.log(timeToEat("2:00 p.m."))
