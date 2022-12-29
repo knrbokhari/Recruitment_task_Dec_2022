@@ -1,4 +1,4 @@
-## Address Book REST Full API
+## REST Full API
 
 ## Built With
 * Node.js
